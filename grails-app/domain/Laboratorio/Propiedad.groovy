@@ -7,11 +7,10 @@ class Propiedad {
    String localidad
    String barrio
    String ciudad
-   float mts2
-   float precio_venta
-   float precio_alquiler
-
-  static belongsTo=[cliente:Cliente]
+   Float mts2
+   Float precio_venta
+   Float precio_alquiler
+   Usuario usuario
 
     static constraints = {
       calle (blank: false)

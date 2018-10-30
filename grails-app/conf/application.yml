@@ -93,12 +93,12 @@ dataSource:
     jmxExport: true
     driverClassName: org.postgresql.Driver
     username: postgres
-    password: '1234567'
+    password: '123456'
 
 environments:
     development:
         dataSource:
-            dbCreate: update
+            dbCreate: create-drop
             url: jdbc:postgresql://localhost:5432/Inmobiliaria
     test:
         dataSource:
