@@ -52,7 +52,7 @@
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav">
             <li class="active"><a href="#">Inicio</a></li>
-            <li><a href="view/masVistas/administracion.gsp">Quiénes somos</a></li> <!--VER URL!!!-->
+            <li><g:link controller="Administracion" action="mostrarInfo"><span class="glyphicon glyphicon-log-in"></span>Quienes somos</g:link></li>
             <li><a href="#">Ofertas-Avisos</a></li>
             <form class="navbar-form navbar-left" action="#">
               <div class="form-group">

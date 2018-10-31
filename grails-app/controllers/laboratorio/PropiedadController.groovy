@@ -2,5 +2,7 @@ package laboratorio
 
 class PropiedadController {
 
-    def index() { }
-}
+PropiedadService propiedadService
+  def show(Long id) {
+      respond propiedadService.get(id)
+  }
