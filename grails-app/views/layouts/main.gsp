@@ -56,14 +56,22 @@
             <li><a href="#">Ofertas-Avisos</a></li>
             <form class="navbar-form navbar-left" action="#">
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Search" name="search">
+                <g:form controller="Administracion" action="buscarPropiedades" method="POST">
+                <input type="text" class="form-control" placeholder="Barrio" name="barrio" id="barrio">
+                <input type="text" class="form-control" placeholder="Ciudad" name="ciudad" id="ciudad">
               </div>
-              <button type="submit" class="btn btn-default">Buscar</button>
-            </form>
+              <button type="submit" class="btn btn-default">Buscar propiedades</button>
+            </g:form>
           </ul>
           <ul class="nav navbar-nav navbar-right">
               <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            <g:if test="${session!=null && session.usuario!=null}">
+            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Usuario: ${session?.usuario?.nombreUsuario}</a></li>
+            <li><g:link controller="login" action="logout" ><span class="glyphicon glyphicon-log-in"></span> Cerrar Sesion</g:link></li>
+            </g:if>
+            <g:else>
+            <li><g:link controller="login" action="login"><span class="glyphicon glyphicon-log-in"></span>Login</g:link></li>
+            </g:else>
           </ul>
         </div>
       </div>

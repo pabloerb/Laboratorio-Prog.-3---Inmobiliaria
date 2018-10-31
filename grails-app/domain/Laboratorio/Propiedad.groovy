@@ -1,4 +1,4 @@
-package Laboratorio
+package laboratorio
 
 class Propiedad {
 
