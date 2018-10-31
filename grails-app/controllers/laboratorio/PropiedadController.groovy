@@ -2,7 +2,10 @@ package laboratorio
 
 class PropiedadController {
 
-PropiedadService propiedadService
+
+static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
+
   def show(Long id) {
-      respond propiedadService.get(id)
+
   }
+}
