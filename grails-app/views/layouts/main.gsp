@@ -52,11 +52,10 @@
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav">
             <li class="active"><a href="#">Inicio</a></li>
-            <li><g:link controller="Administracion" action="mostrarInfo">Quienes somos</g:link></li>
+            <li><g:link controller="administracion" action="mostrarInfo">Quienes somos</g:link></li>
             <li><a href="#">Ofertas-Avisos</a></li>
-            <form class="navbar-form navbar-left" action="#">
               <div class="form-group">
-                <g:form controller="Administracion" action="buscarPropiedades" method="POST">
+                <g:form controller="administracion" action="buscarPropiedades" method="POST">
                 <input type="text" class="form-control" placeholder="Barrio" name="barrio" id="barrio">
                 <input type="text" class="form-control" placeholder="Ciudad" name="ciudad" id="ciudad">
               </div>

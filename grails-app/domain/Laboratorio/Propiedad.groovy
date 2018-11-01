@@ -10,7 +10,9 @@ class Propiedad {
    Float mts2
    Float precio_venta
    Float precio_alquiler
-   Usuario usuario
+   String categoria
+   String estado
+   static belongsTo=[cliente:Cliente]
 
     static constraints = {
       calle (blank: false)
@@ -21,5 +23,6 @@ class Propiedad {
       mts2 (nullable: false)
       precio_venta (nullable: false)
       precio_alquiler (nullable: false)
+      estado (inList:["Disponible","No Disponible"])
     }
 }
