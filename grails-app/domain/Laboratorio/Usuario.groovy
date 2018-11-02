@@ -65,6 +65,6 @@ class Usuario implements Serializable {
       direccion (blank: false)
       telefono (nullable: true, unique: true, matches:"[0-9]{3}[-][0-9]{6}")
       email (email: true, blank: false, unique: true)
-      password (size: 1..8, blank: false, unique:true)
+      password (blank: false, unique:true)
     }
 }

@@ -11,6 +11,6 @@ class Rol implements Serializable {
   	}
 
   	static constraints = {
-  		authority blank: false, unique: true
+  		authority (blank: false, unique: true)
   	}
 }

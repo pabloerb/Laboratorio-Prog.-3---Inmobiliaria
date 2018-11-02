@@ -6,6 +6,8 @@ import grails.gorm.services.Service
 class AdministracionService{
 
   def buscarPropiedades(String barrio,String ciudad) {
-    return Propiedad.executeQuery("select FROM Propiedad as l WHERE l.barrio = :barrio AND l.ciudad= :ciudad",[barrio: barrio,ciudad:ciudad])
+    barrio='%'+barrio.trim()+'%'
+    ciudad='%'+ciudad.trim()+'%'
+    return Propiedad.executeQuery("FROM Propiedad as l WHERE l.barrio like :barrio AND l.ciudad like :ciudad",[barrio: barrio,ciudad:ciudad])
   }
 }

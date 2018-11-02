@@ -51,15 +51,15 @@
 
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Inicio</a></li>
+            <li><g:link controller="administracion" action="inicio">Inicio</g:link></li>
             <li><g:link controller="administracion" action="mostrarInfo">Quienes somos</g:link></li>
             <li><a href="#">Ofertas-Avisos</a></li>
               <div class="form-group">
                 <g:form controller="administracion" action="buscarPropiedades" method="POST">
                 <input type="text" class="form-control" placeholder="Barrio" name="barrio" id="barrio">
                 <input type="text" class="form-control" placeholder="Ciudad" name="ciudad" id="ciudad">
+                <button type="submit" class="btn btn-default">Buscar propiedades</button>
               </div>
-              <button type="submit" class="btn btn-default">Buscar propiedades</button>
             </g:form>
           </ul>
           <ul class="nav navbar-nav navbar-right">

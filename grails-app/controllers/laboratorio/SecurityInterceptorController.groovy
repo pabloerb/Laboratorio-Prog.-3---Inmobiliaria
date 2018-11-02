@@ -22,6 +22,10 @@ class SecurityInterceptor {
       match(controller:"libro", action:"save")
       match(controller:"libro", action:"create")
       match(controller:"libro", action:"delete")*/
+      match(controller:"propiedad",action:"create")
+      match(controller:"propiedad",action:"delete")
+      match(controller:"propiedad",action:"save")
+      match(controller:"propiedad",action:"update")
   }
 
   boolean before() {
@@ -30,7 +34,7 @@ class SecurityInterceptor {
           return false
       }
 
-      if(controllerName=='Usuario' && (actionName=='edit' || actionName=='save' || actionName=='create' || actionName=='delete' )) {
+      if(controllerName=='usuario' && (actionName=='edit' || actionName=='save' || actionName=='create' || actionName=='delete' )) {
         if(!session.usuario.getRoles().any{it.authority=='ADMIN'}) {
             render(view: "/index", model: [message:'No tiene permisos para la accion solicitada'])
             return false
