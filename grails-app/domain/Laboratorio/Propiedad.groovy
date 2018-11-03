@@ -22,9 +22,9 @@ class Propiedad {
       barrio (blank: false)
       ciudad (blank: false)
       mts2 (nullable: false)
-      precio (nullable: false)
       estado (inList:["Disponible","No Disponible"])
       comentarios (nullable:true)
       tipoOperacion (blank: false)
+      precio (nullable: false)
     }
 }
