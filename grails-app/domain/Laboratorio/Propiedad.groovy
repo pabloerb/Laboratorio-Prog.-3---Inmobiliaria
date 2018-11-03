@@ -8,10 +8,10 @@ class Propiedad {
    String barrio
    String ciudad
    Float mts2
-   Float precio_venta
-   Float precio_alquiler
+   Float precio
    String categoria
    String estado
+   String tipoOperacion
    static belongsTo=[propietario:Cliente]
    static hasMany=[comentarios:Comentario]
 
@@ -22,9 +22,9 @@ class Propiedad {
       barrio (blank: false)
       ciudad (blank: false)
       mts2 (nullable: false)
-      precio_venta (nullable: false)
-      precio_alquiler (nullable: false)
       estado (inList:["Disponible","No Disponible"])
       comentarios (nullable:true)
+      tipoOperacion (blank: false)
+      precio (nullable: false)
     }
 }
