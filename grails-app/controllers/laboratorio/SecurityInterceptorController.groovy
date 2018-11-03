@@ -26,6 +26,13 @@ class SecurityInterceptor {
       match(controller:"propiedad",action:"delete")
       match(controller:"propiedad",action:"save")
       match(controller:"propiedad",action:"update")
+
+      match(controller:"administracion",action:"create")
+      match(controller:"administracion",action:"delete")
+      match(controller:"administracion",action:"save")
+      match(controller:"administracion",action:"update")
+      match(controller:"administracion",action:"buscarPropiedades")
+      match(controller:"administracion", action:"mostrarInfo")
   }
 
   boolean before() {
