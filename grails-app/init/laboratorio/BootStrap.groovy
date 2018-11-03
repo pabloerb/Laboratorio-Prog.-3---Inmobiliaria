@@ -8,9 +8,9 @@ class BootStrap {
     cli1.save(flush:true)
 
 
-      def propi1=new Propiedad(calle:"Rivadavia",numero:253,localidad:"Capital",barrio:"Hola",ciudad:"Chau",mts2:30,precio_venta:400,precio_alquiler:6000,categoria:"Casa",estado:"Disponible",propietario:cli1)
+      def propi1=new Propiedad(calle:"Rivadavia",numero:253,localidad:"Capital",barrio:"Hola",ciudad:"Chau",mts2:30,precio:6000,categoria:"Casa",estado:"Disponible",tipoOperacion:"VENTA",propietario:cli1)
       propi1.save(flush:true)
-      println("Calle:"+propi1.calle+" Numero:"+propi1.numero+" Localidad:"+propi1.localidad+" Barrio:"+propi1.barrio+" Ciudad:"+propi1.ciudad+" mts2:"+propi1.mts2+" Precio Venta:"+propi1.precio_venta+" Precio Alquiler:"+propi1.precio_alquiler+" Estado:"+propi1.estado)
+      println("Calle:"+propi1.calle+" Numero:"+propi1.numero+" Localidad:"+propi1.localidad+" Barrio:"+propi1.barrio+" Ciudad:"+propi1.ciudad+" mts2:"+propi1.mts2+" Precio:"+propi1.precio+"Estado:"+propi1.estado+"Tipo Operacion:"+propi1.tipoOperacion)
 
 
     def usu1=new Usuario(nombre:"Pablo",apellido:"Rodriguez",nrodocumento:1234567,nombreUsuario:"Pablorb",direccion:"Rivadavia",email:"pablorb94@gmail.com",password:"hola123")

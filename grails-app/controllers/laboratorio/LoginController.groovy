@@ -10,7 +10,8 @@ class LoginController {
      if (u) {
        if (u.password == u.generateMD5_A(params.password)) {
           session.usuario = u
-          render(view: "/index")
+          redirect(controller: "administracion", action: "sesion")
+          //render(view: "/index")
         } else {
           render(view: "login", model: [message: "Constraseña Incorrecta"])
         }

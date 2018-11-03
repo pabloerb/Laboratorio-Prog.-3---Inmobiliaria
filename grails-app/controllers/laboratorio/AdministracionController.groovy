@@ -41,4 +41,9 @@ class AdministracionController {
     {
       render(view:"formularioOferta")
     }
+
+    def sesion(){
+    render (view: "gestion")
+ }
+
 }

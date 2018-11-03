@@ -34,7 +34,9 @@
 
 </head>
 <body>
-
+  <g:if test="${message}">
+    <div class="message" role="status">${message}</div>
+  </g:if>
     <nav class="navbar navbar-inverse">
       <div class="container-fluid">
         <div class="navbar-header">
