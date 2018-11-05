@@ -96,4 +96,10 @@ class PropiedadController {
             '*'{ render status: NOT_FOUND }
         }
     }
+
+    def agregarCliente()
+    {
+      def propiedad=propiedadService.get(params.idpropiedad)
+      render(view:"agregarCliente",model:[cliente:new Cliente(propiedad:propiedad)])
+    }
 }

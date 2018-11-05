@@ -15,7 +15,7 @@ Comentario comentario
       apellido (blank:false, size:1..20)
       email (blank:false,email:true,unique:true)
       dni (blank:false,unique:true)
-      propiedad (nullable:false)
+      propiedad (nullable:true)
       comentario (nullable:true)
     }
 

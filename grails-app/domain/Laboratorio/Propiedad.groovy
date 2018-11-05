@@ -13,7 +13,6 @@ class Propiedad {
    String estado
    String tipoOperacion
    Cliente propietario
-   Comentario comentarios
 
     static constraints = {
       calle (blank: false)
@@ -23,7 +22,6 @@ class Propiedad {
       ciudad (blank: false)
       mts2 (nullable: false)
       estado (inList:["Disponible","No Disponible"])
-      comentarios (nullable:true)
       tipoOperacion (blank: false)
       precio (nullable: false)
     }

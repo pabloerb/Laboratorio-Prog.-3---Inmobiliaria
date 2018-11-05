@@ -38,7 +38,7 @@
                     <input class="delete" type="submit" value="${message(code: 'default.button.delete.label', default: 'Delete')}" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" />
                     </g:if>
                     <g:else>
-                     <li><g:link class="create" controller="cliente" action="agregarCliente" params="[idpropiedad:this.propiedad.id]"><span class="glyphicon glyphicon-log-in"></span>Obtener mas informacion</g:link></li>
+                     <li><g:link class="create" controller="propiedad" action="agregarCliente" params="[idpropiedad:this.propiedad.id]"><span class="glyphicon glyphicon-log-in"></span>Obtener mas informacion</g:link></li>
                     </g:else>
                 </fieldset>
             </g:form>

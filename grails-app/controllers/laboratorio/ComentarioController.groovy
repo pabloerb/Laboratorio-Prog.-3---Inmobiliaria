@@ -98,9 +98,4 @@ class ComentarioController {
     }
 
 
-    def agregarComentario()
-    {
-     def cliente=comentarioService.get(params.idcliente)
-      render(view:"create",model:[comentario: new Comentario(cliente:cliente)])
-    }
 }
