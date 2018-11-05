@@ -3,14 +3,16 @@
     <head>
         <meta name="layout" content="main" />
         <g:set var="entityName" value="${message(code: 'cliente.label', default: 'Cliente')}" />
-        <title><g:message code="default.create.label" args="[entityName]" /></title>
+        <title><g:message code="default.create.label" args="[entityName]" />Formulario</title>
     </head>
     <body>
         <a href="#create-cliente" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
         <div class="nav" role="navigation">
             <ul>
-                <li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
+                <li><g:link controller="administracion" action="sesion">Menu principal</g:link> </li>
+                <g:if test="${session!=null && session.usuario!=null}">
                 <li><g:link class="list" action="index"><g:message code="default.list.label" args="[entityName]" /></g:link></li>
+              </g:if>
             </ul>
         </div>
         <div id="create-cliente" class="content scaffold-create" role="main">
@@ -30,7 +32,7 @@
                     <f:all bean="cliente"/>
                 </fieldset>
                 <fieldset class="buttons">
-                    <g:submitButton name="create" class="save" value="${message(code: 'default.button.create.label', default: 'Create')}" />
+                    <g:submitButton name="create" class="save" value="Enviar" />
                 </fieldset>
             </g:form>
         </div>

@@ -6,15 +6,17 @@ String nombre
 String apellido
 String email
 Long dni
-static hasMany=[propiedades:Propiedad,comentarios:Comentario]
+Propiedad propiedad
+Comentario comentario
 
 
     static constraints = {
       nombre (blank:false,size:1..20)
       apellido (blank:false, size:1..20)
       email (blank:false,email:true,unique:true)
-      propiedades (nullable:true)
-      comentarios (nullable:true)
+      dni (blank:false,unique:true)
+      propiedad (nullable:false)
+      comentario (nullable:true)
     }
 
     String toString()

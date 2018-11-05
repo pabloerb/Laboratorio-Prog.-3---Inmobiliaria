@@ -96,4 +96,11 @@ class ClienteController {
             '*'{ render status: NOT_FOUND }
         }
     }
+
+
+def agregarCliente()
+{
+ def propiedad=clienteService.get(params.idpropiedad)
+  render(view:"create",model:[cliente: new Cliente(propiedad: propiedad)])
+}
 }

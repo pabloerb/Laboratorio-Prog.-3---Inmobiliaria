@@ -37,7 +37,7 @@ class SecurityInterceptor {
 
       if(controllerName=='propiedad' && (actionName=="edit" || actionName=="save" || actionName=="create" || actionName=="delete" || actionName=="update" )) {
         if(!session.usuario.getRoles().any{it.authority=="ADMIN"}) {
-            render(view: "/index", model: [message:"No tiene permisos para la accion solicitada"])
+            render(view: "../administracion/gestion", model: [message:"No tiene permisos para la accion solicitada"])
             return false
         }
       }

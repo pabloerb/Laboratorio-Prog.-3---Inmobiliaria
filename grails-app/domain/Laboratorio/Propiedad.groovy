@@ -12,8 +12,8 @@ class Propiedad {
    String categoria
    String estado
    String tipoOperacion
-   static belongsTo=[propietario:Cliente]
-   static hasMany=[comentarios:Comentario]
+   Cliente propietario
+   Comentario comentarios
 
     static constraints = {
       calle (blank: false)
@@ -27,4 +27,11 @@ class Propiedad {
       tipoOperacion (blank: false)
       precio (nullable: false)
     }
+
+
+    String toString()
+{
+  return ["Barrio:"+this.barrio+" Calle:"+this.calle+" Numero:"+this.numero]
+}
+
 }

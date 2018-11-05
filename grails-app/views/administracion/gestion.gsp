@@ -5,6 +5,9 @@
     <title>Gestion de la página</title>
 </head>
 <body>
+  <g:if test="${message}">
+    <div class="message" role="status">${message}</div>
+  </g:if>
     <content tag="nav">
         <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Application Status <span class="caret"></span></a>

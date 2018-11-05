@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta name="layout" content="main" />
+      <g:if test="${session!=null && session.usuario!=null}">
+        <meta name="layout" content="mainUsuario" />
+      </g:if>
+      <g:else>
+      <meta name="layout" content="main" />
+    </g:else>
         <g:set var="entityName" value="${message(code: 'persona.label', default: 'Persona')}" />
         <title><g:message code="default.show.label" args="[entityName]" /></title>
     </head>
@@ -9,9 +14,14 @@
         <a href="#show-persona" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
         <div class="nav" role="navigation">
             <ul>
-                <li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
+              <g:if test="${session!=null && session.usuario!=null}">
+              <li><g:link controller="administracion" action="sesion">Menu principal</g:link> </li>
                 <li><g:link class="list" action="index"><g:message code="default.list.label" args="[entityName]" /></g:link></li>
                 <li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
+                </g:if>
+                <g:else>
+                <li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
+              </g:else>
             </ul>
         </div>
         <div id="show-persona" class="content scaffold-show" role="main">
