@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta name="layout" content="main" />
+      <g:if test="${session!=null && session.usuario!=null}">
+        <meta name="layout" content="mainUsuario" />
+      </g:if>
+      <g:else>
+      <meta name="layout" content="main" />
+    </g:else>
         <g:set var="entityName" value="${message(code: 'cliente.label', default: 'Cliente')}" />
         <title><g:message code="default.create.label" args="[entityName]" />Formulario</title>
     </head>

@@ -65,7 +65,6 @@
             </g:form>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-              <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
             <g:if test="${session!=null && session.usuario!=null}">
             <li><a href="#"><span class="glyphicon glyphicon-user"></span> Usuario: ${session?.usuario?.nombreUsuario}</a></li>
             <li><g:link controller="login" action="logout" ><span class="glyphicon glyphicon-log-in"></span> Cerrar Sesion</g:link></li>

@@ -41,10 +41,11 @@
                 <label for="email">Email:</label>
                 <input type="text" name="email" id="email">
                 <br>
-                <label for="propiedad">Propiedad interesada:</label>
-                <input type="text" disabled value="${cliente.propiedad}" name="propiedad" id="propiedad">
+                <input type="text" hidden value="${this.cliente.propiedad.id}" name="propiedad" id="propiedad">
                 <br>
-                <input type="text" hidden name="comentario" id="comentario">
+                <f:field bean="cliente" property="comentario.comentario"/>
+                <br>
+                <input type="text" hidden value="No leido" name="comentario.estado" id="comentario.estado">
                 <br>
                 </fieldset>
                 <fieldset class="buttons">

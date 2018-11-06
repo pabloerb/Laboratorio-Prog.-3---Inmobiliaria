@@ -27,6 +27,10 @@ class SecurityInterceptor {
       match(controller:"propiedad",action:"save")
       match(controller:"propiedad",action:"update")
       match(controller:"propiedad",action:"edit")
+      match(controller:"cliente",action:"edit")
+      match(controller:"cliente", action:"update")
+      match(controller:"cliente",action:"delete")
+      match(controller:"comentario", action:"delete")
   }
 
   boolean before() {
@@ -42,6 +46,20 @@ class SecurityInterceptor {
         }
       }
 
+      if(controllerName=='cliente' && (actionName=="edit" || actionName=="delete" || actionName=="update" )) {
+        if(!session.usuario.getRoles().any{it.authority=="ADMIN"}) {
+            render(view: "../administracion/gestion", model: [message:"No tiene permisos para la accion solicitada"])
+            return false
+        }
+      }
+
+
+      if(controllerName=='comentario' && (actionName=="delete")) {
+        if(!session.usuario.getRoles().any{it.authority=="ADMIN"}) {
+            render(view: "../administracion/gestion", model: [message:"No tiene permisos para la accion solicitada"])
+            return false
+        }
+      }
 
       return true
   }

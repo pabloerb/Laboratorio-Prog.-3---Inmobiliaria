@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta name="layout" content="main" />
+      <g:if test="${session!=null && session.usuario!=null}">
+        <meta name="layout" content="mainUsuario" />
+      </g:if>
+      <g:else>
+      <meta name="layout" content="main" />
+    </g:else>
         <g:set var="entityName" value="${message(code: 'comentario.label', default: 'Comentario')}" />
         <title><g:message code="default.create.label" args="[entityName]" /></title>
     </head>
@@ -10,7 +15,9 @@
         <div class="nav" role="navigation">
             <ul>
                 <li><g:link controller="administracion" action="sesion">Menu principal</g:link> </li>
+                <g:if test="${session!=null && session.usuario!=null}">
                 <li><g:link class="list" action="index"><g:message code="default.list.label" args="[entityName]" /></g:link></li>
+              </g:if>
             </ul>
         </div>
         <div id="create-comentario" class="content scaffold-create" role="main">
