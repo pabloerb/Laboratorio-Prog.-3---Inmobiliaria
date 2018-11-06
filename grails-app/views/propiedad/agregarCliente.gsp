@@ -42,7 +42,7 @@
                 <input type="text" name="email" id="email">
                 <br>
                 <label for="propiedad">Propiedad interesada:</label>
-                <input type="text" disabled value="${cliente.propiedad.toString()}" name="propiedad" id="propiedad">
+                <input type="text" disabled value="${cliente.propiedad}" name="propiedad" id="propiedad">
                 <br>
                 <input type="text" hidden name="comentario" id="comentario">
                 <br>

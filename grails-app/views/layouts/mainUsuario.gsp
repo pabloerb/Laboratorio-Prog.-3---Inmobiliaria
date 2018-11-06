@@ -91,7 +91,7 @@
 
             <div class="collapse navbar-collapse " id="navbarCollapse">
               <ul class="navbar-nav mr-auto">
-                <li class="nav-item" ><button type="button" class="btn btn-inverse navbar-btn"><g:link controller="usuario" action="index">USUARIOS</g:link></button></li>
+                <li class="nav-item" ><button type="button" class="btn btn-inverse navbar-btn"><g:link controller="usuarioRol" action="index">USUARIOS</g:link></button></li>
                 <li class="nav-item" ><button type="button" class="btn btn-inverse navbar-btn"><g:link controller="propiedad" action="index">PROPIEDADES</g:link></button></li>
                 <li class="nav-item" ><button type="button" class="btn btn-inverse navbar-btn"><g:link controller="cliente" action="index">CLIENTES</g:link></button></li>
                 <li class="nav-item" ><button type="button" class="btn btn-inverse navbar-btn"><g:link controller="comentario" action="index">COMENTARIOS</g:link></button></li>
