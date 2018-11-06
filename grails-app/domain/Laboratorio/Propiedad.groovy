@@ -13,7 +13,7 @@ class Propiedad {
    String estado
    String tipoOperacion
    Cliente propietario
-    byte[] imagen
+    //byte[] imagen
     String nombreImagen
 
 
