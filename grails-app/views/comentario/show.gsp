@@ -36,6 +36,9 @@
                     <g:link class="edit" action="edit" resource="${this.comentario}"><g:message code="default.button.edit.label" default="Edit" /></g:link>
                     <input class="delete" type="submit" value="${message(code: 'default.button.delete.label', default: 'Delete')}" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" />
                   </g:if>
+                  <g:else>
+                   <li><g:link class="create" controller="comentario" action="agregarCliente" params="${[idcomentario:this.comentario.id,idpropiedad:this.comentario.propiedad.id]}"><span class="glyphicon glyphicon-log-in"></span>Continuar Formulario</g:link></li>
+                 </g:else>
 
             </g:form>
         </div>

@@ -96,6 +96,10 @@ class ComentarioController {
             '*'{ render status: NOT_FOUND }
         }
     }
-
-
+    def agregarCliente()
+    {
+      def comentario=comentarioService.get(params.idcomentario)
+      def propiedad=comentarioService.get(params.idpropiedad)
+      render(view:"agregarCliente",model:[cliente:new Cliente(comentario:comentario,propiedad:propiedad)])
+    }
 }

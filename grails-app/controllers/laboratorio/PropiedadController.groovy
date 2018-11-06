@@ -97,9 +97,9 @@ class PropiedadController {
         }
     }
 
-    def agregarCliente()
+    def agregarComentario()
     {
       def propiedad=propiedadService.get(params.idpropiedad)
-      render(view:"agregarCliente",model:[cliente:new Cliente(propiedad:propiedad)])
+      render(view:"agregarComentario",model:[comentario:new Comentario(propiedad:propiedad)])
     }
 }

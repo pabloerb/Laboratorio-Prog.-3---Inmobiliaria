@@ -39,10 +39,8 @@
                 <input type="text" name="email" id="email">
                 <br>
                 <label for="propiedad">Propiedad interesada:</label>
-                <input type="text" disabled value="${cliente.propiedad}" name="propiedad" id="propiedad">
-                <br>
-                <input type="text" hidden name="comentario" id="comentario">
-                <br>
+                <input type="text" disabled value="${this.cliente.propiedad.id.toString()}" name="propiedad" id="propiedad">
+                <input type="text" hidden value="${this.cliente.comentario.id}" name="comentario" id="comentario">
                 </fieldset>
                 <fieldset class="buttons">
                     <g:submitButton name="create" class="save" value="Enviar" />
