@@ -13,6 +13,9 @@ class Propiedad {
    String estado
    String tipoOperacion
    Cliente propietario
+    byte[] imagen
+    String nombreImagen
+
 
     static constraints = {
       calle (blank: false)
@@ -22,6 +25,7 @@ class Propiedad {
       ciudad (blank: false)
       mts2 (nullable: false)
       estado (inList:["Disponible","No Disponible"])
+      tipoOperacion (inList:["Venta","Alquiler"])
       tipoOperacion (blank: false)
       precio (nullable: false)
     }
