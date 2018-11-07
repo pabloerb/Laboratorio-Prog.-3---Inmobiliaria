@@ -9,6 +9,15 @@ class UrlMappings {
             }
         }
 
+
+"/InfoPropiedad"(resources:"APIPropiedad"){
+
+collection {"/listAPIPropiedadPorTipoOperacion" (controller: "APIPropiedad", action:
+"listAPIPropiedadPorTipoOperacion")
+}
+}
+
+
         "/"(view:"/index")
         "500"(view:'/error')
         "404"(view:'/notFound')
