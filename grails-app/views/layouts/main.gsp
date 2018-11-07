@@ -16,7 +16,10 @@
     <g:layoutHead/>
 
     <style>
-
+    h3{
+      font-size: 27px;
+      text-align: center;
+    }
 
     .navbar {
       margin-bottom: 0;

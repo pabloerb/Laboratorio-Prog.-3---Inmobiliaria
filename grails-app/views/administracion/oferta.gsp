@@ -49,13 +49,12 @@
 
 
 
----------------------------------------
 
 
 
 
 
-        <div class="container text-center">
+      <!--<div class="container text-center">
           <div class="row">
             <div class="col-sm-4">
               <asset:image src="oferta1-casa.png" class="img-responsive" style="width:100%" alt="Imagen de Oferta" />
@@ -169,7 +168,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div>-->
 
 
 </body>

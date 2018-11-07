@@ -7,7 +7,7 @@
         <g:layoutTitle default="Inmobiliaria"/>
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <asset:link rel="icon" href="logo.ico" type="image/x-ico" />
+    <asset:link rel="icon" href="favicon1.ico" type="image/x-ico" />
 
     <asset:stylesheet src="application.css"/>
 
@@ -85,7 +85,7 @@
         <div class="container">
             <div class="navbar-header">
               <a class="navbar-brand" href="/#" style="padding-right:150px">
-                      <asset:image src="logo.ico" alt="Logo" id="Logo" title="Inicio"/>
+                      <asset:image src="logo.jpg" alt="Logo" id="Logo" title="Inicio"/>
                 </a>
             </div>
 

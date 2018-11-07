@@ -18,6 +18,7 @@
       .carousel-caption {
         display: none;
       }
+
     }
     </style>
 </head>
@@ -38,32 +39,28 @@
           <div class="item active">
             <asset:image src="casa-carrusel1.jpg" alt="Image"/>
             <div class="carousel-caption">
-              <h3>TÍTULO</h3>
-              <p>Descripción...</p>
+              <h3>ENCUENTRE EL INMUEBLE QUE NECESITA</h3>
             </div>
           </div>
 
           <div class="item">
             <asset:image src="departamento-carrusel.jpg" alt="Image"/>
             <div class="carousel-caption">
-              <h3>TÍTULO</h3>
-              <p>Descripción...</p>
+              <h3>ENCUENTRE EL INMUEBLE QUE NECESITA</h3>
             </div>
           </div>
 
           <div class="item">
             <asset:image src="local-carrusel.jpg" alt="Image"/>
             <div class="carousel-caption">
-              <h3>TÍTULO</h3>
-              <p>Descripción...</p>
+              <h3>ENCUENTRE EL INMUEBLE QUE NECESITA</h3>
             </div>
           </div>
 
           <div class="item">
             <asset:image src="oficina-carrusel.jpg" alt="Image"/>
             <div class="carousel-caption">
-              <h3>TÍTULO</h3>
-              <p>Descripción...</p>
+              <h3>ENCUENTRE EL INMUEBLE QUE NECESITA</h3>
             </div>
           </div>
 
@@ -108,6 +105,6 @@
                   <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
                   <p>Descripción</p>
                 </div>
-                            
+
 </body>
 </html>
