@@ -12,7 +12,7 @@ class Propiedad {
    String categoria
    String estado
    String tipoOperacion
-   Cliente propietario
+   Propietario propietario
     //byte[] imagen
     String nombreImagen
 
@@ -25,9 +25,10 @@ class Propiedad {
       ciudad (blank: false)
       mts2 (nullable: false)
       estado (inList:["Disponible","No Disponible"])
-      tipoOperacion (inList:["Venta","Alquiler"])
-      tipoOperacion (blank: false)
+      tipoOperacion (blank:false ,inList:["Venta","Alquiler"])
       precio (nullable: false)
+      propietario (nullable:false)
+      nombreImagen (nullable:true)
     }
 
 

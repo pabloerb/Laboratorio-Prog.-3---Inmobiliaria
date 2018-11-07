@@ -28,9 +28,14 @@ class SecurityInterceptor {
       match(controller:"propiedad",action:"update")
       match(controller:"propiedad",action:"edit")
       match(controller:"cliente",action:"edit")
-      match(controller:"cliente", action:"update")
+      match(controller:"cliente",action:"update")
       match(controller:"cliente",action:"delete")
-      match(controller:"comentario", action:"delete")
+      match(controller:"comentario",action:"delete")
+      match(controller:"propietario",action:"create")
+      match(controller:"propietario",action:"delete")
+      match(controller:"propietario",action:"save")
+      match(controller:"propietario",action:"update")
+      match(controller:"propietario",action:"edit")
   }
 
   boolean before() {
@@ -55,6 +60,14 @@ class SecurityInterceptor {
 
 
       if(controllerName=='comentario' && (actionName=="delete")) {
+        if(!session.usuario.getRoles().any{it.authority=="ADMIN"}) {
+            render(view: "../administracion/gestion", model: [message:"No tiene permisos para la accion solicitada"])
+            return false
+        }
+      }
+
+
+      if(controllerName=='propietario' && (actionName=="edit" || actionName=="save" || actionName=="create" || actionName=="delete" || actionName=="update" )) {
         if(!session.usuario.getRoles().any{it.authority=="ADMIN"}) {
             render(view: "../administracion/gestion", model: [message:"No tiene permisos para la accion solicitada"])
             return false

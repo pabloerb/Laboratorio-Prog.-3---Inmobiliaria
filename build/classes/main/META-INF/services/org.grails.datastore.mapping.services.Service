@@ -2,3 +2,4 @@ laboratorio.AdministracionService
 laboratorio.$ClienteServiceImplementation
 laboratorio.$ComentarioServiceImplementation
 laboratorio.$PropiedadServiceImplementation
+laboratorio.$PropietarioServiceImplementation

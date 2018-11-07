@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-    <head>
       <head>
         <g:if test="${session!=null && session.usuario!=null}">
           <meta name="layout" content="mainUsuario" />

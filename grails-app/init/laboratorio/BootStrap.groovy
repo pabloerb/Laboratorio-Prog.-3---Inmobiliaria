@@ -4,14 +4,12 @@ class BootStrap {
 
     def init = {
 
-    def cli1=new Cliente(nombre:"Arturo",apellido:"Jimenez",dni:12345,email:"hola@gmail.com")
-    cli1.save(flush:true)
+    def propietario1=new Propietario(nombre:"Arturo",apellido:"Jimenez",dni:12345,email:"hola@gmail.com")
+    propietario1.save(flush:true)
 
 
-      def propi1=new Propiedad(calle:"Rivadavia",numero:253,localidad:"Capital",barrio:"Hola",ciudad:"Chau",mts2:30,precio:6000,categoria:"Casa",estado:"Disponible",tipoOperacion:"VENTA",propietario:cli1)
-      propi1.save(flush:true)
-      println("Calle:"+propi1.calle+" Numero:"+propi1.numero+" Localidad:"+propi1.localidad+" Barrio:"+propi1.barrio+" Ciudad:"+propi1.ciudad+" mts2:"+propi1.mts2+" Precio:"+propi1.precio+"Estado:"+propi1.estado+"Tipo Operacion:"+propi1.tipoOperacion)
-
+      def propiedad1=new Propiedad(calle:"Rivadavia",numero:253,localidad:"Capital",barrio:"Hola",ciudad:"Chau",mts2:30,precio:6000,categoria:"Casa",estado:"Disponible",tipoOperacion:"Venta",propietario:propietario1)
+      propiedad1.save(flush:true)
 
     def usu1=new Usuario(nombre:"Pablo",apellido:"Rodriguez",nrodocumento:1234567,nombreUsuario:"Pablorb",direccion:"Rivadavia",email:"pablorb94@gmail.com",password:"hola123")
     usu1.save(flush:true)
