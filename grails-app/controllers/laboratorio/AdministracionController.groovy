@@ -16,7 +16,8 @@ class AdministracionController {
         }
         else{
           flash.message="Resultado para busqueda de propiedades para Barrio=${params.barrio} y Ciudad=${params.ciudad}"
-          def propiedades= administracionService.buscarPropiedades(params.barrio,params.ciudad)
+          def estado="Disponible"
+          def propiedades= administracionService.buscarPropiedades(params.barrio,params.ciudad,estado)
           render(view:"busqueda", model:[propiedadesList:propiedades,propiedadesCount:propiedades.size()])
         }
 
