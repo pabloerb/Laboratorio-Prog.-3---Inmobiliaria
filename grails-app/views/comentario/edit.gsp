@@ -2,8 +2,7 @@
 <html>
     <head>
       <meta name="layout" content="mainUsuario" />
-
-        <g:set var="entityName" value="${message(code: 'comentario.label', default: 'Comentario')}" />
+      <g:set var="entityName" value="${message(code: 'comentario.label', default: 'Comentario')}" />
         <title><g:message code="default.edit.label" args="[entityName]" /></title>
     </head>
     <body>
@@ -11,8 +10,8 @@
         <div class="nav" role="navigation">
             <ul>
                 <li><g:link controller="administracion" action="sesion">Menu principal</g:link> </li>
-                <li><g:link class="list" action="index"><g:message code="default.list.label" args="[entityName]" /></g:link></li>
-                <li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
+                <li><g:link class="list" action="index">Lista de Comentarios</g:link></li>
+                <li><g:link class="create" action="create">Nuevo Comentario</g:link></li>
             </ul>
         </div>
         <div id="edit-comentario" class="content scaffold-edit" role="main">

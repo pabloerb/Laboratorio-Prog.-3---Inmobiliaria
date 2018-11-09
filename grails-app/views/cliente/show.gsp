@@ -16,8 +16,8 @@
             <ul>
               <g:if test="${session!=null && session.usuario!=null}">
               <li><g:link controller="administracion" action="sesion">Menu principal</g:link> </li>
-                <li><g:link class="list" action="index"><g:message code="default.list.label" args="[entityName]" /></g:link></li>
-                <li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
+                <li><g:link class="list" action="index">Lista de Clientes</g:link></li>
+                <li><g:link class="create" action="create">Nuevo Cliente</g:link></li>
                 </g:if>
                 <g:else>
                 <li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
@@ -26,9 +26,17 @@
         </div>
         <div id="show-cliente" class="content scaffold-show" role="main">
             <h1><g:message code="default.show.label" args="[entityName]" /></h1>
+            <g:if test="${session!=null && session.usuario!=null}">
             <g:if test="${flash.message}">
-            <div class="message" role="status">${flash.message}</div>
+            <div class="message" role="status">Operacion exitosa</div>
             </g:if>
+            </g:if>
+            <g:else>
+            <g:if test="${flash.message}">
+            <div class="message" role="status">Operacion exitosa, formulario enviado</div>
+          </g:if>
+          </g:else>
+
             <f:display bean="cliente" />
             <g:form resource="${this.cliente}" method="DELETE">
                 <fieldset class="buttons">

@@ -3,7 +3,7 @@
     <head>
         <meta name="layout" content="main" />
         <g:set var="entityName" value="${message(code: 'cliente.label', default: 'Cliente')}" />
-        <title><g:message code="default.create.label" args="[entityName]" />Formulario</title>
+        <title>Formulario</title>
     </head>
     <body>
         <a href="#create-cliente" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
@@ -16,9 +16,9 @@
             </ul>
         </div>
         <div id="create-cliente" class="content scaffold-create" role="main">
-            <h1><g:message code="default.create.label" args="[entityName]" /></h1>
+            <h1>Formulario</h1>
             <g:if test="${flash.message}">
-            <div class="message" role="status">${flash.message}</div>
+            <div class="message" role="status">Ingrese sus datos</div>
             </g:if>
             <g:hasErrors bean="${this.cliente}">
             <ul class="errors" role="alert">

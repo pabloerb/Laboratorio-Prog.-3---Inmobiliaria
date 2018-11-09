@@ -16,7 +16,7 @@
             <ul>
                 <li><g:link controller="administracion" action="sesion">Menu principal</g:link> </li>
                 <g:if test="${session!=null && session.usuario!=null}">
-                <li><g:link class="list" action="index"><g:message code="default.list.label" args="[entityName]" /></g:link></li>
+                <li><g:link class="list" action="index">Lista de Clientes</g:link></li>
               </g:if>
             </ul>
         </div>
