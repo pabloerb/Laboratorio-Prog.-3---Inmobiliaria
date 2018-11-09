@@ -34,7 +34,9 @@ class AdministracionController {
 
     def inicio()
     {
-      render(view:"/index")
+      //def resultado = Propiedad.list()
+      render(view:"/index",model:[listaPropiedades: Propiedad.listOrderById(max:6, order:"desc")])//Función de grails
+      //me lleva a la vista "index" y manda una lista con las ultimas ofertas.
     }
 
     def formOferta()

@@ -19,6 +19,7 @@
         display: none;
       }
 
+
     }
     </style>
 </head>
@@ -80,31 +81,18 @@
 
     <div class="container text-center">
       <h3>Ofertas</h3><br>
+
       <div class="row">
-        <div class="col-sm-4">
-          <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Imagen de Oferta">
-          <p>Descripción</p>
-        </div>
-        <div class="col-sm-4">
-          <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-          <p>Descripción</p>
-        </div>
-        <div class="col-sm-4">
-            <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-            <p>Descripción</p>
-          </div>
+        <g:each var="propiedad" in="${listaPropiedades}">   <!--muestro la lista que recibe con las ultimas ofertas-->
           <div class="col-sm-4">
-              <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-              <p>Descripción</p>
-            </div>
-            <div class="col-sm-4">
-                <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-                <p>Descripción</p>
-              </div>
-              <div class="col-sm-4">
-                  <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-                  <p>Descripción</p>
-                </div>
+            <asset:image src="${propiedad.nombreImagen}" class="img-responsive" style="width:100%" alt="Imagen de Oferta" />
+            <p> ${propiedad.tipoOperacion} Ubicación: ${propiedad.localidad} ${propiedad.barrio}<br>
+              <g:link controller="propiedad" action="agregarCliente" params="[idpropiedad:propiedad.id]">Más información</g:link>
+            </p>
+          </div>
+        </g:each>
+
+
 
 </body>
 </html>

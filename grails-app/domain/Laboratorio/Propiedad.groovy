@@ -29,6 +29,7 @@ class Propiedad {
       precio (nullable: false)
       propietario (nullable:false)
       nombreImagen (nullable:true)
+      categoria (blank:false, inList:["Casa","Departamento","Local","Oficina"])
     }
 
 

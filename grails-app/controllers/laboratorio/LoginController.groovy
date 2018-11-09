@@ -20,8 +20,8 @@ class LoginController {
       }
     }
 
-    def logout() {
+    def logout() { //Método para cerrar session
       session.usuario=null
-      render(view: "/index")
+      render(view:"/index",model:[listaPropiedades: Propiedad.listOrderById(max:6, order:"desc")]) //redirecciona al index
     }
 }
