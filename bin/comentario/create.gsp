@@ -7,37 +7,37 @@
       <g:else>
       <meta name="layout" content="main" />
     </g:else>
-        <g:set var="entityName" value="${message(code: 'cliente.label', default: 'Cliente')}" />
-        <title><g:message code="default.create.label" args="[entityName]" />Formulario</title>
+        <g:set var="entityName" value="${message(code: 'comentario.label', default: 'Comentario')}" />
+        <title><g:message code="default.create.label" args="[entityName]" /></title>
     </head>
     <body>
-        <a href="#create-cliente" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
+        <a href="#create-comentario" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
         <div class="nav" role="navigation">
             <ul>
                 <li><g:link controller="administracion" action="sesion">Menu principal</g:link> </li>
                 <g:if test="${session!=null && session.usuario!=null}">
-                <li><g:link class="list" action="index">Lista de Clientes</g:link></li>
+                <li><g:link class="list" action="index">Lista de Comentarios</g:link></li>
               </g:if>
             </ul>
         </div>
-        <div id="create-cliente" class="content scaffold-create" role="main">
+        <div id="create-comentario" class="content scaffold-create" role="main">
             <h1><g:message code="default.create.label" args="[entityName]" /></h1>
             <g:if test="${flash.message}">
-            <div class="message" role="status">${flash.message}</div>
+            <div class="message" role="status">Comentario creado</div>
             </g:if>
-            <g:hasErrors bean="${this.cliente}">
+            <g:hasErrors bean="${this.comentario}">
             <ul class="errors" role="alert">
-                <g:eachError bean="${this.cliente}" var="error">
+                <g:eachError bean="${this.comentario}" var="error">
                 <li <g:if test="${error in org.springframework.validation.FieldError}">data-field-id="${error.field}"</g:if>><g:message error="${error}"/></li>
                 </g:eachError>
             </ul>
             </g:hasErrors>
-            <g:form resource="${this.cliente}" method="POST">
+            <g:form resource="${this.comentario}" method="POST">
                 <fieldset class="form">
-                    <f:all bean="cliente"/>
+                    <f:all bean="comentario"/>
                 </fieldset>
                 <fieldset class="buttons">
-                    <g:submitButton name="create" class="save" value="Enviar" />
+                    <g:submitButton name="create" class="save" value="${message(code: 'default.button.create.label', default: 'Create')}" />
                 </fieldset>
             </g:form>
         </div>

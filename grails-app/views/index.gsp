@@ -20,7 +20,14 @@
       }
 
 
+
     }
+    
+    p {
+      border-style: dashed;
+      border-color: #006699;
+    }
+
     </style>
 </head>
 <body>
@@ -80,7 +87,7 @@
     </div>
 
     <div class="container text-center">
-      <h3>Ofertas</h3><br>
+      <h3>Últimas Ofertas</h3><br>
 
       <div class="row">
         <g:each var="propiedad" in="${listaPropiedades}">   <!--muestro la lista que recibe con las ultimas ofertas-->

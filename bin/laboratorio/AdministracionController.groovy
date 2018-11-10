@@ -15,8 +15,9 @@ class AdministracionController {
 
         }
         else{
-          flash.message="Resultado para busqueda de propiedades con para Barrio=${params.barrio} y Ciudad=${params.ciudad}"
-          def propiedades= administracionService.buscarPropiedades(params.barrio,params.ciudad)
+          flash.message="Resultado para busqueda de propiedades para Barrio=${params.barrio} y Ciudad=${params.ciudad}"
+          def estado="Disponible"
+          def propiedades= administracionService.buscarPropiedades(params.barrio,params.ciudad,estado)
           render(view:"busqueda", model:[propiedadesList:propiedades,propiedadesCount:propiedades.size()])
         }
 
@@ -34,11 +35,18 @@ class AdministracionController {
 
     def inicio()
     {
-      render(view:"/index")
+      //def resultado = Propiedad.list()
+      render(view:"/index",model:[listaPropiedades: Propiedad.listOrderById(max:6, order:"desc")])//Función de grails
+      //me lleva a la vista "index" y manda una lista con las ultimas ofertas.
     }
 
     def formOferta()
     {
       render(view:"formularioOferta")
     }
+
+    def sesion(){
+    render (view: "gestion")
+ }
+
 }

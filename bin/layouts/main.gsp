@@ -16,7 +16,10 @@
     <g:layoutHead/>
 
     <style>
-
+    h3{
+      font-size: 27px;
+      text-align: center;
+    }
 
     .navbar {
       margin-bottom: 0;
@@ -34,7 +37,9 @@
 
 </head>
 <body>
-
+  <g:if test="${message}">
+    <div class="message" role="status">${message}</div>
+  </g:if>
     <nav class="navbar navbar-inverse">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -63,7 +68,6 @@
             </g:form>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-              <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
             <g:if test="${session!=null && session.usuario!=null}">
             <li><a href="#"><span class="glyphicon glyphicon-user"></span> Usuario: ${session?.usuario?.nombreUsuario}</a></li>
             <li><g:link controller="login" action="logout" ><span class="glyphicon glyphicon-log-in"></span> Cerrar Sesion</g:link></li>

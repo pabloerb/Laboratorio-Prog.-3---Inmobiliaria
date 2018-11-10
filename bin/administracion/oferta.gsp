@@ -34,17 +34,14 @@
 
         <div class="container text-center">
           <div class="row">
-            <g:each var="propiedades" in="${listaPropiedades}">
+            <g:each var="propiedad" in="${listaPropiedades}">
               <div class="col-sm-4">
-                <asset:image src="oferta1-casa.png" class="img-responsive" style="width:100%" alt="Imagen de Oferta" />
-                <p>${propiedades.tipoOperacion} - ${propiedades.barrio} ${propiedades.localidad} <br>
-                  <g:link controller="administracion" action="formOferta">Más información</g:link>
+                <asset:image src="${propiedad.nombreImagen}" class="img-responsive" style="width:100%" alt="Imagen de Oferta" />
+                <p> ${propiedad.tipoOperacion} Ubicación: ${propiedad.localidad} ${propiedad.barrio}<br>
+                  <g:link controller="propiedad" action="agregarCliente" params="[idpropiedad:propiedad.id]">Más información</g:link>
                 </p>
               </div>
             </g:each>
-
-
-
           </div>
         </div>
 
@@ -57,11 +54,7 @@
 
 
 
-
-
-
-        ---------------------------------------------------------------------
-        <div class="container text-center">
+      <!--<div class="container text-center">
           <div class="row">
             <div class="col-sm-4">
               <asset:image src="oferta1-casa.png" class="img-responsive" style="width:100%" alt="Imagen de Oferta" />
@@ -175,7 +168,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div>-->
 
 
 </body>

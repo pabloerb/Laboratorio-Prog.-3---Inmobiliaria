@@ -9,7 +9,17 @@ class UrlMappings {
             }
         }
 
-        "/"(view:"/index")
+
+"/InfoPropiedad"(resources:"APIPropiedad"){
+
+collection {"/listAPIPropiedadPorTipoOperacion" (controller: "APIPropiedad", action:
+"listAPIPropiedadPorTipoOperacion")
+}
+}
+
+
+        "/"(controller:"administracion", action:"inicio")
+         //al iniciar la aplicacion me lleva al controller y al action indicado
         "500"(view:'/error')
         "404"(view:'/notFound')
     }

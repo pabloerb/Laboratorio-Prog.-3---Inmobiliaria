@@ -13,7 +13,7 @@
 
     <g:layoutHead/>
 
-    
+    <!--Agregado-->
     <style>
         a{
             padding-left: 2px;
@@ -40,47 +40,47 @@
         .navbar-nav{
             list-style:none;
         }
-        
-        body{
-          background-image: url('${resource(dir:"images/", file: "asesoria-inmobiliaria.jpg")}');
-        background-size: 100%;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        }
-
-        th{
-          background: #0088cc;
-        }
-
-        th a{
-          color:azure!important;
-        }
-
-        th:hover{
-          background: #0088cc;
-        }
-
-        td, td a{
-          color: black;
-
-        }
-        td{
-          border-top: solid 1px;
-          border-color: #006699;
-        }
-
-        th{
-          border-top: solid 1px;
-          padding-top: 15px;
-          text-align: left;
-        }
 
     </style>
-    
+    <!--FIN Agregado-->
+
+
+
+
+
+
+
+
+
+
+
+
 </head>
 <body>
 
-  
+
+    <!--<div class="navbar navbar-default navbar-static-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/#">
+		    <asset:image src="grails.svg" alt="Grails Logo"/>
+                </a>
+            </div>
+            <div class="navbar-collapse collapse" aria-expanded="false" style="height: 0.8px;">
+                <ul class="nav navbar-nav navbar-right">
+                    <g:pageProperty name="page.nav" />
+                </ul>
+            </div>
+        </div>
+    </div>-->
+
+    <!--Agregado-->
     <div class="navbar navbar-default navbar-inverse" role="navigation" >
         <div class="container">
             <div class="navbar-header">
@@ -103,7 +103,7 @@
 
         </div>
     </div>
-    
+    <!--FIN Agregado-->
 
     <g:layoutBody/>
 

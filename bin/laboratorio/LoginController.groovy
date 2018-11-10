@@ -10,7 +10,8 @@ class LoginController {
      if (u) {
        if (u.password == u.generateMD5_A(params.password)) {
           session.usuario = u
-          render(view: "/index")
+          redirect(controller: "administracion", action: "sesion")
+          //render(view: "/index")
         } else {
           render(view: "login", model: [message: "Constraseña Incorrecta"])
         }
@@ -19,8 +20,8 @@ class LoginController {
       }
     }
 
-    def logout() {
+    def logout() { //Método para cerrar session
       session.usuario=null
-      render(view: "/index")
+      render(view:"/index",model:[listaPropiedades: Propiedad.listOrderById(max:6, order:"desc")]) //redirecciona al index
     }
 }
