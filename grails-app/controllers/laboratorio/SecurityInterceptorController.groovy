@@ -30,12 +30,19 @@ class SecurityInterceptor {
       match(controller:"cliente",action:"edit")
       match(controller:"cliente",action:"update")
       match(controller:"cliente",action:"delete")
+      match(controller:"cliente",action:"index")
       match(controller:"comentario",action:"delete")
+      match(controller:"comentario",action:"update")
+      match(controller:"comentario",action:"edit")
+      match(controller:"comentario",action:"show")
+      match(controller:"comentario",action:"index")
       match(controller:"propietario",action:"create")
       match(controller:"propietario",action:"delete")
       match(controller:"propietario",action:"save")
       match(controller:"propietario",action:"update")
       match(controller:"propietario",action:"edit")
+      match(controller:"propietario",action:"show")
+      match(controller:"propietario",action:"index")
   }
 
   boolean before() {
@@ -51,7 +58,7 @@ class SecurityInterceptor {
         }
       }
 
-      if(controllerName=='cliente' && (actionName=="edit" || actionName=="delete" || actionName=="update" )) {
+      if(controllerName=='cliente' && (actionName=="edit" || actionName=="delete" || actionName=="update" || actionName=="index"  )) {
         if(!session.usuario.getRoles().any{it.authority=="ADMIN"}) {
             render(view: "../administracion/gestion", model: [message:"No tiene permisos para la accion solicitada"])
             return false
@@ -59,15 +66,15 @@ class SecurityInterceptor {
       }
 
 
-      if(controllerName=='comentario' && (actionName=="delete")) {
-        if(!session.usuario.getRoles().any{it.authority=="ADMIN"}) {
+      if(controllerName=='comentario' && (actionName=="edit" || actionName=="save" || actionName=="create" || actionName=="delete" || actionName=="update" || actionName=="show" || actionName=="index" )) {
+        if(!session.usuario.getRoles().any{it.authority=="ADMIN"} || !session.usuario.getRoles().any{it.authority=="OPERADOR"}) {
             render(view: "../administracion/gestion", model: [message:"No tiene permisos para la accion solicitada"])
             return false
         }
       }
 
 
-      if(controllerName=='propietario' && (actionName=="edit" || actionName=="save" || actionName=="create" || actionName=="delete" || actionName=="update" )) {
+      if(controllerName=='propietario' && (actionName=="edit" || actionName=="save" || actionName=="create" || actionName=="delete" || actionName=="update" || actionName=="show" || actionName=="index"  )) {
         if(!session.usuario.getRoles().any{it.authority=="ADMIN"}) {
             render(view: "../administracion/gestion", model: [message:"No tiene permisos para la accion solicitada"])
             return false

@@ -14,6 +14,9 @@ class UrlMappings {
 
 collection {"/listAPIPropiedadPorTipoOperacion" (controller: "APIPropiedad", action:
 "listAPIPropiedadPorTipoOperacion")
+
+collection {"/listAPIPropiedadPorCategoria"(controller: "APIPropiedad", action:
+"listAPIPropiedadPorCategoria")
 }
 }
 

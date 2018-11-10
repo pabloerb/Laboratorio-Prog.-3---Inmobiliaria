@@ -12,11 +12,21 @@ static responseFormats = ['json', 'xml']
 
     def listAPIPropiedadPorTipoOperacion (String p) {
         if (p) {
-        respond Propiedad.findAllByTipoOperacion(p)
+        respond Propiedad.findAllBytipoOperacion(p)
         }
         else {
         respond([])
         }
       }
+
+
+      def listAPIPropiedadPorCategoria (String p) {
+    if (p) {
+    respond Propiedad.findAllBycategoria(p)
+    }
+    else {
+    respond([])
+    }
+  }
 
 }
