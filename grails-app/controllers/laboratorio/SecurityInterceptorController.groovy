@@ -9,19 +9,7 @@ class SecurityInterceptor {
   }
 
   SecurityInterceptor() {
-    /*matchAll().excludes(controller:'login', action:'login')
-      .excludes(controller:'autor', action:'list')
-      .excludes(controller:'libro', action:'list')
-      .excludes(view:"/index")*/
 
-    /*  match(controller:"autor", action:"edit")
-      match(controller:"autor", action:"create")
-      match(controller:"autor", action:"save")
-      match(controller:"autor", action:"delete")
-      match(controller:"libro", action:"edit")
-      match(controller:"libro", action:"save")
-      match(controller:"libro", action:"create")
-      match(controller:"libro", action:"delete")*/
       match(controller:"propiedad",action:"create")
       match(controller:"propiedad",action:"delete")
       match(controller:"propiedad",action:"save")
@@ -47,7 +35,7 @@ class SecurityInterceptor {
 
   boolean before() {
       if (!session.usuario && actionName != "login") {
-          redirect(controller: "login", action: "login")
+          redirect(controller: "login", action: "login",model: [message:"No tiene permisos para la accion solicitada"])
           return false
       }
 
@@ -67,10 +55,15 @@ class SecurityInterceptor {
 
 
       if(controllerName=='comentario' && (actionName=="edit" || actionName=="save" || actionName=="create" || actionName=="delete" || actionName=="update" || actionName=="show" || actionName=="index" )) {
-        if(!session.usuario.getRoles().any{it.authority=="ADMIN"} || !session.usuario.getRoles().any{it.authority=="OPERADOR"}) {
+        if(!session.usuario.getRoles().any{it.authority=="ADMIN"}) {
+          if(!session.usuario.getRoles().any{it.authority=="OPERADOR"})
+          {
             render(view: "../administracion/gestion", model: [message:"No tiene permisos para la accion solicitada"])
             return false
+
+          }
         }
+
       }
 
 

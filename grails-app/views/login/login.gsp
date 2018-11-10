@@ -7,7 +7,7 @@
 <body>
     <div class="container">
     <g:if test="${message}">
-      <div class="message" role="status">${message}</div>
+      <div class="message" role="status">${flash.message}</div>
     </g:if>
       <h1>Login de Usuario</h1>
       <g:form controller="login" action="login" method="post">
