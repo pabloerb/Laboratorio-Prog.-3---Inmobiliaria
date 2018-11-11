@@ -12,7 +12,7 @@ static responseFormats = ['json', 'xml']
 
     def listAPIPropiedadPorTipoOperacion (String p) {
         if (p) {
-        respond Propiedad.findAllBytipoOperacion(p)
+        respond Propiedad.findAllByTipoOperacion(p)
         }
         else {
         respond([])
@@ -22,7 +22,7 @@ static responseFormats = ['json', 'xml']
 
       def listAPIPropiedadPorCategoria (String p) {
     if (p) {
-    respond Propiedad.findAllBycategoria(p)
+    respond Propiedad.findAllByCategoria(p)
     }
     else {
     respond([])
